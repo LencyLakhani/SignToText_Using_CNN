@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Video Page</title>
+    <!-- simple css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/video.css') }}" />
+  </head>
+  <body>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Press <b>Enter</b> if sign is matched.</li>
+          <li>Press <b>Backspace</b> if mistake in sentence.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary bt" data-dismiss="modal">Ok</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- nav section -->
+    <div class="nav-section">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="#">
+              <svg
+                id="logo"
+                width="40"
+                height="40"
+                viewBox="0 0 800 628"
+                fill="#3f5c83"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M363.184 230.299C337.815 217.612 308 216.3 282.26 225.436C335.518 225.436 371.27 251.03 389.232 288.656C399.952 311.03 382.798 336.245 359.711 336.245C382.748 336.245 399.975 361.415 389.232 383.834C370.826 422.391 331.579 447.401 288.86 447.401C288.164 447.401 170.771 436.632 170.771 436.632L87.7638 478.316C76.0338 484.182 62.995 478.79 57.895 468.59L2.325 357.434C-2.88375 346.665 0.936252 333.812 11.0075 327.907L83.5975 286.571L135 193.826C142.988 122.27 178.414 56.6175 234.679 10.4187C248.918 -1.39127 270.105 0.692478 281.566 14.935C293.374 29.1775 291.291 50.0187 277.051 61.83C261.423 75.0287 247.529 89.9662 236.415 106.292C263.505 87.8812 294.764 75.3775 329.147 71.2087C347.554 68.7775 364.226 81.6287 366.31 100.04C368.741 118.45 355.89 135.124 337.482 137.207C317.337 139.639 298.583 146.586 282.26 156.312C314.903 149.171 355.65 152.39 392.359 170.206C409.029 178.542 415.975 198.342 407.639 215.016C399.652 231.341 379.509 238.287 363.184 230.299ZM329.147 317.139C321.507 301.507 306.225 291.781 288.859 291.781C283.015 291.764 277.226 292.902 271.824 295.131C266.422 297.359 261.514 300.633 257.383 304.766C253.251 308.898 249.977 313.806 247.749 319.209C245.522 324.611 244.384 330.4 244.403 336.244C244.403 363.029 266.663 380.706 288.859 380.706C306.225 380.706 321.507 370.98 329.147 355.349C334.705 343.537 346.165 336.591 358.321 336.244C346.165 335.897 334.705 328.95 329.147 317.139ZM797.674 270.592C802.884 281.361 799.062 294.214 788.991 300.119L716.402 341.455L665 434.2C657.012 505.756 621.586 571.409 565.321 617.607C551.656 628.997 530.573 627.787 518.434 613.091C506.626 598.849 508.709 578.007 522.95 566.196C538.579 552.997 552.471 538.06 563.585 521.734C536.495 540.145 505.236 552.649 470.853 556.817C458.326 559.95 436.413 549.764 433.69 527.986C431.259 509.576 444.11 492.902 462.518 490.819C482.663 488.386 501.417 481.44 517.74 471.714C485.097 478.855 444.35 475.636 407.641 457.82C390.971 449.484 384.025 429.684 392.361 413.01C400.348 396.684 420.493 389.736 436.818 397.726C462.186 410.412 492.001 411.725 517.741 402.589C464.484 402.589 428.731 376.995 410.769 339.369C400.049 316.995 417.204 291.78 440.29 291.78C417.254 291.78 400.026 266.61 410.769 244.191C428.31 207.446 465.818 180.582 513.226 180.624L629.23 191.392L712.237 149.709C723.997 143.829 737.022 149.266 742.105 159.435L797.674 270.592ZM511.14 247.32C493.774 247.32 478.491 257.046 470.851 272.677C465.294 284.489 453.834 291.435 441.678 291.782C453.834 292.13 465.294 299.077 470.851 310.887C478.491 326.519 493.774 336.245 511.14 336.245C516.983 336.262 522.773 335.124 528.175 332.896C533.577 330.667 538.484 327.393 542.616 323.26C546.748 319.128 550.022 314.22 552.249 308.818C554.477 303.415 555.614 297.626 555.596 291.782C555.596 264.996 533.336 247.32 511.14 247.32Z"
+                />
+              </svg>
+              SignConnect
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-4">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-4">
+                  <a class="nav-link" href="#learning-section">Learning</a>
+                </li>
+                <li class="nav-item mx-4">
+                  <a class="nav-link" href="#about-section">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!--card-->
+      <div class="row main-section">
+        <div class="col-sm-6 justify-content-center">
+          <div class="card bg-dark text-white video-card">
+            <h5 class="card-header">Video Record</h5>
+            <div class="card-body text-center">
+              
+                <img id="video_feed" src="{{ url_for('video_feed_route') }}" alt="Video Feed">
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 justify-content-center ">
+          <div class="card text-card">
+            <h5 class="card-header text-white">Text Output</h5>
+            <div class="card-body">
+              <div id="prediction_output">
+                <!-- Predicted text output will appear here -->
+                <h3 class="h3">Sentence:</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--button-->
+      <div class="text-center" role="group" aria-label="Basic example">
+        <button type="button" id="pause_button" class="btn btn-primary bt">Pause</button>
+        <button type="button" class="btn btn-secondary" id="restart_button">Restart</button>
+        <button type="button" class="btn btn-primary bt" data-toggle="modal" data-target="#exampleModal">
+          Learning Goal
+        </button>
+        
+
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      
+      <script>
+        var videoFeedPaused = false;
+
+        // Function to pause/resume the video feed and predictions
+        $('#pause_button').click(function() {
+            if (!videoFeedPaused) {
+                // Pause the video feed and predictions
+                $('#video_feed').hide();
+                videoFeedPaused = true;
+                $(this).text('Resume');
+            } else {
+                // Resume the video feed and predictions
+                $('#video_feed').show();
+                videoFeedPaused = false;
+                $(this).text('Pause');
+                // Fetch and append prediction only when video feed is not paused
+                
+            }
+        });
+
+        // Function to restart the video feed
+        $('#restart_button').click(function() {
+            // Reload the page to restart the video feed
+            location.reload();
+        });
+
+        // Function to handle keypress event
+        $(document).keypress(function(e) {
+            if (e.which === 13) { // Check if the pressed key is Enter key
+                e.preventDefault(); // Prevent default action (e.g., form submission)
+                fetchPrediction();
+            }
+          });
+          // Function to handle keypress event
+        $(document).keydown(function(e) {
+            if (e.which === 8) { // Check if the pressed key is Backspace key
+                e.preventDefault(); // Prevent default action (e.g., navigating back)
+                removeLastCharacter(); // Call function to remove last character
+            }
+        });
+
+        // Function to remove the last character from the predicted sentence
+        function removeLastCharacter() {
+            var predictionText = $('#prediction_output').text().trim(); // Get the current predicted sentence
+            predictionText = predictionText.slice(0, -1); // Remove the last character
+            $('#prediction_output').text(predictionText); // Update the predicted sentence
+        }
+
+        // Function to fetch prediction data from the server and update the output container
+        function fetchPrediction() {
+            if (!videoFeedPaused) {
+                $.get('/get_prediction', function(data) {
+                    // Update the output container with the predicted text
+                    var predictionText = data.prediction;
+                    $('#prediction_output').text(function(_, currentText) {
+                        return currentText + predictionText;
+                    });
+                });
+            }
+        }
+    </script>
+  </body>
+</html>

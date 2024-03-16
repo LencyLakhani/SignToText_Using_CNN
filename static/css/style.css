@@ -1,0 +1,116 @@
+:root {
+  --primery-color: #e3effb;
+  --sec-color: #3f5c83;
+}
+html {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+/* navbar color */
+
+.nav-section{
+    margin: 20px 40px;
+}
+
+nav{
+    background-color: var(--primery-color);
+    border-radius: 20px;
+}
+.navbar-brand{
+    color: var(--sec-color);
+    font-weight: 500;
+}
+.nav-link{
+    color: var(--sec-color);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: var(--sec-color);
+    font-weight: 500;
+    border-bottom: var(--sec-color) 2px solid;
+}
+
+
+/* main section */
+.submit{
+    background-color: var(--sec-color);
+    width: 60px;
+    color: white;
+}
+#landingLogo{
+    width: 100%;
+    height: 100%;
+}
+#main-section p, #main-section h1{
+    width: 80%;
+}
+
+
+
+/* learning section */
+.learning{
+    width: 100%;
+    height: 500px;
+    background-color: var(--primery-color);
+}
+.learning hr{
+    width: 45%;
+    background-color: var(--sec-color);
+    color: var(--sec-color);
+    height: 3px;
+}
+.desc-learning h1{
+    color: var(--sec-color);
+}
+.desc-learning p{
+    text-align: justify;
+    width: 70%;
+}
+.learning-img{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: var(--sec-color) 0px 8px 24px;
+}
+.explore{
+    background-color: var(--sec-color);
+    border: none;
+}
+
+
+/* about section */
+.about{
+    width: 70%;
+    margin-bottom: 7%;
+}
+.about h1{
+    color: var(--sec-color);
+}
+.about hr{
+    width: 20%;
+    background-color: var(--sec-color);
+    color: var(--sec-color);
+    height: 3px;
+}
+
+
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 50px;
+    background-color: var(--primery-color);
+    color: var(--sec-color);
+}
+.footer .row{
+    width: 100%;
+}

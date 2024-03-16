@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Language</title>
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <!-- bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- simple css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- nav section -->
+  <div class="nav-section">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid mx-5">
+        <a class="navbar-brand" href="#">
+          <svg id="logo" width="40" height="40" viewBox="0 0 800 628" fill="#3f5c83" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M363.184 230.299C337.815 217.612 308 216.3 282.26 225.436C335.518 225.436 371.27 251.03 389.232 288.656C399.952 311.03 382.798 336.245 359.711 336.245C382.748 336.245 399.975 361.415 389.232 383.834C370.826 422.391 331.579 447.401 288.86 447.401C288.164 447.401 170.771 436.632 170.771 436.632L87.7638 478.316C76.0338 484.182 62.995 478.79 57.895 468.59L2.325 357.434C-2.88375 346.665 0.936252 333.812 11.0075 327.907L83.5975 286.571L135 193.826C142.988 122.27 178.414 56.6175 234.679 10.4187C248.918 -1.39127 270.105 0.692478 281.566 14.935C293.374 29.1775 291.291 50.0187 277.051 61.83C261.423 75.0287 247.529 89.9662 236.415 106.292C263.505 87.8812 294.764 75.3775 329.147 71.2087C347.554 68.7775 364.226 81.6287 366.31 100.04C368.741 118.45 355.89 135.124 337.482 137.207C317.337 139.639 298.583 146.586 282.26 156.312C314.903 149.171 355.65 152.39 392.359 170.206C409.029 178.542 415.975 198.342 407.639 215.016C399.652 231.341 379.509 238.287 363.184 230.299ZM329.147 317.139C321.507 301.507 306.225 291.781 288.859 291.781C283.015 291.764 277.226 292.902 271.824 295.131C266.422 297.359 261.514 300.633 257.383 304.766C253.251 308.898 249.977 313.806 247.749 319.209C245.522 324.611 244.384 330.4 244.403 336.244C244.403 363.029 266.663 380.706 288.859 380.706C306.225 380.706 321.507 370.98 329.147 355.349C334.705 343.537 346.165 336.591 358.321 336.244C346.165 335.897 334.705 328.95 329.147 317.139ZM797.674 270.592C802.884 281.361 799.062 294.214 788.991 300.119L716.402 341.455L665 434.2C657.012 505.756 621.586 571.409 565.321 617.607C551.656 628.997 530.573 627.787 518.434 613.091C506.626 598.849 508.709 578.007 522.95 566.196C538.579 552.997 552.471 538.06 563.585 521.734C536.495 540.145 505.236 552.649 470.853 556.817C458.326 559.95 436.413 549.764 433.69 527.986C431.259 509.576 444.11 492.902 462.518 490.819C482.663 488.386 501.417 481.44 517.74 471.714C485.097 478.855 444.35 475.636 407.641 457.82C390.971 449.484 384.025 429.684 392.361 413.01C400.348 396.684 420.493 389.736 436.818 397.726C462.186 410.412 492.001 411.725 517.741 402.589C464.484 402.589 428.731 376.995 410.769 339.369C400.049 316.995 417.204 291.78 440.29 291.78C417.254 291.78 400.026 266.61 410.769 244.191C428.31 207.446 465.818 180.582 513.226 180.624L629.23 191.392L712.237 149.709C723.997 143.829 737.022 149.266 742.105 159.435L797.674 270.592ZM511.14 247.32C493.774 247.32 478.491 257.046 470.851 272.677C465.294 284.489 453.834 291.435 441.678 291.782C453.834 292.13 465.294 299.077 470.851 310.887C478.491 326.519 493.774 336.245 511.14 336.245C516.983 336.262 522.773 335.124 528.175 332.896C533.577 330.667 538.484 327.393 542.616 323.26C546.748 319.128 550.022 314.22 552.249 308.818C554.477 303.415 555.614 297.626 555.596 291.782C555.596 264.996 533.336 247.32 511.14 247.32Z" />
+          </svg>
+          SignConnect
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-4">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#learning-section">Learning</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- main section -->
+  <section class="main-section container mb-4" id="main-section">
+    <div class="row">
+      <div class="col mx-auto my-auto">
+        <h1>Welcome To Sign Language Recognition</h1>
+        <p class="my-4">
+          Where communication knows no barriers. Our innovative web platform empowers deaf and mute individuals by
+          seamlessly transforming sign language into text, fostering inclusive and accessible communication for all.
+        </p>
+        <div class="row">
+          <div class="col">
+            <form action="./video" method="get" id="languageForm">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select Prefer Language..</option>
+                <option value="American">American Sign Language</option>
+                <option value="Spanish">Indian Sign Language</option>
+                <option value="Chinese">Mexican Sign Language</option>
+              </select>
+            </form> 
+          </div>
+          <div class="col">
+            
+            <button type="submit" class="btn btn-primary submit" form="languageForm">
+              Go
+            </button>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col mx-auto my-auto">
+        <img src="{{ url_for('static', filename='assets/landing illustrator.png') }}" alt="Landing Logo" id="landingLogo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- start vector -->
+  <svg width="100%" height="100%" viewBox="0 0 1920 252" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M0 0L64 36.75C128 73.5 256 147 384 178.5C512 210 640 199.5 768 189C896 178.5 1024 168 1152 131.25C1280 94.5 1408 31.5 1536 36.75C1664 42 1792 115.5 1856 152.25L1920 189V252H1856C1792 252 1664 252 1536 252C1408 252 1280 252 1152 252C1024 252 896 252 768 252C640 252 512 252 384 252C256 252 128 252 64 252H0V0Z"
+      fill="#E3EFFB" />
+  </svg>
+
+  <!-- Learning section -->
+  <section class="learning d-flex justify-content-center" id="learning-section">
+    <div class="row mx-auto">
+      <div class="col my-auto text-center">
+        <img src="{{ url_for('static', filename='assets/learning.png') }}" alt="Learning Signs" class="learning-img" />
+      </div>
+      <div class="col my-auto desc-learning">
+        <h1>Learning Resource</h1>
+        <hr class="mb-5" />
+        <p class="mb-5">
+          Our learning resources make it easy to learn sign language. We have step-by-step guides and videos that help
+          you improve your signing skills, no matter your level.With interactive video lessons, users can develop their
+          signing skills at their own pace and convenience.
+
+
+
+
+        </p>
+        <a href="#" class="btn btn-primary explore">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end vector -->
+  <svg width="100%" height="100%" viewBox="0 0 1920 257" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M0 257L64 219.521C128 182.042 256 107.083 384 74.9583C512 42.8333 640 53.5417 768 64.25C896 74.9583 1024 85.6667 1152 123.146C1280 160.625 1408 224.875 1536 219.521C1664 214.167 1792 139.208 1856 101.729L1920 64.25V1.90735e-06H1856C1792 1.90735e-06 1664 1.90735e-06 1536 1.90735e-06C1408 1.90735e-06 1280 1.90735e-06 1152 1.90735e-06C1024 1.90735e-06 896 1.90735e-06 768 1.90735e-06C640 1.90735e-06 512 1.90735e-06 384 1.90735e-06C256 1.90735e-06 128 1.90735e-06 64 1.90735e-06H0V257Z"
+      fill="#E3EFFB" />
+  </svg>
+
+  <!-- about us section -->
+  <section class="about mx-auto" id="about-section">
+    <div class="container text-center">
+      <h1>About</h1>
+      <hr class="mb-5 mx-auto" />
+      <p class="mb-5">
+        At SignConnect, I am passionate about fostering inclusive communication for the deaf and mute community. I am
+        committed to providing innovative solutions that break down barriers and empower individuals to connect through
+        sign language.I use advanced technology like ML CNN models, OpenCV, NumPy, and Keras to make sign language
+        translation easy. I am here to help the deaf and mute community communicate effectively and inclusively.
+      </p>
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <div class="footer d-flex justify-content-center">
+    <div class="row text-center my-auto container">
+      <div class="col">
+        <h6>Lency Lakhani</h6>
+      </div>
+      <div class="col">
+        <h6>CWID: 885196055</h6>
+      </div>
+      <div class="col">
+        <h6>Email: lencylakhani@csu.fullerton.edu</h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap script -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <!-- script for nav link -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll("nav .container ul li");
+    window.onscroll = () => {
+      var current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLi.forEach((li) => {
+        li.classList.remove("active");
+        if (li.classList.contains(current)) {
+          li.classList.add("active");
+        }
+      });
+    };
+  </script>
+</body>
+
+</html>

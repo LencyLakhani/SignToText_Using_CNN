@@ -1,0 +1,46 @@
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+.card body{
+    height: 50px;
+}
+
+.video-card .card-header{
+    border-radius: 0px; 
+    border-color: white; 
+    text-align:center;
+}
+.video-card .card-body{
+    height: 300px;
+}
+
+.text-card .card-header{
+    color: var(--sec-color);
+    text-align: center;
+    background-color: var(--sec-color);
+}
+
+.text-card .card-body{
+    height: 300px;
+}
+.main-section{
+    margin: 5% 10%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bt{
+    background-color: var(--sec-color);
+}
+
+.modal-header{
+    background-color: var(--primery-color);
+    color: var(--sec-color);
+
+}
+b{
+    color: var(--sec-color);
+}

@@ -15,6 +15,13 @@
 .video-card .card-body{
     height: 300px;
 }
+#prediction_output{
+    height: 120px;
+}
+#speech{
+    margin-left: 15px;
+    font-size: 25px;
+}
 
 .text-card .card-header{
     color: var(--sec-color);

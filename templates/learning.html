@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learning.css') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="../static/css/learning.css"> -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- nav section -->
+  <div class="nav-section">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid mx-5">
+        <a class="navbar-brand" href="#">
+          <svg id="logo" width="40" height="40" viewBox="0 0 800 628" fill="#3f5c83" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M363.184 230.299C337.815 217.612 308 216.3 282.26 225.436C335.518 225.436 371.27 251.03 389.232 288.656C399.952 311.03 382.798 336.245 359.711 336.245C382.748 336.245 399.975 361.415 389.232 383.834C370.826 422.391 331.579 447.401 288.86 447.401C288.164 447.401 170.771 436.632 170.771 436.632L87.7638 478.316C76.0338 484.182 62.995 478.79 57.895 468.59L2.325 357.434C-2.88375 346.665 0.936252 333.812 11.0075 327.907L83.5975 286.571L135 193.826C142.988 122.27 178.414 56.6175 234.679 10.4187C248.918 -1.39127 270.105 0.692478 281.566 14.935C293.374 29.1775 291.291 50.0187 277.051 61.83C261.423 75.0287 247.529 89.9662 236.415 106.292C263.505 87.8812 294.764 75.3775 329.147 71.2087C347.554 68.7775 364.226 81.6287 366.31 100.04C368.741 118.45 355.89 135.124 337.482 137.207C317.337 139.639 298.583 146.586 282.26 156.312C314.903 149.171 355.65 152.39 392.359 170.206C409.029 178.542 415.975 198.342 407.639 215.016C399.652 231.341 379.509 238.287 363.184 230.299ZM329.147 317.139C321.507 301.507 306.225 291.781 288.859 291.781C283.015 291.764 277.226 292.902 271.824 295.131C266.422 297.359 261.514 300.633 257.383 304.766C253.251 308.898 249.977 313.806 247.749 319.209C245.522 324.611 244.384 330.4 244.403 336.244C244.403 363.029 266.663 380.706 288.859 380.706C306.225 380.706 321.507 370.98 329.147 355.349C334.705 343.537 346.165 336.591 358.321 336.244C346.165 335.897 334.705 328.95 329.147 317.139ZM797.674 270.592C802.884 281.361 799.062 294.214 788.991 300.119L716.402 341.455L665 434.2C657.012 505.756 621.586 571.409 565.321 617.607C551.656 628.997 530.573 627.787 518.434 613.091C506.626 598.849 508.709 578.007 522.95 566.196C538.579 552.997 552.471 538.06 563.585 521.734C536.495 540.145 505.236 552.649 470.853 556.817C458.326 559.95 436.413 549.764 433.69 527.986C431.259 509.576 444.11 492.902 462.518 490.819C482.663 488.386 501.417 481.44 517.74 471.714C485.097 478.855 444.35 475.636 407.641 457.82C390.971 449.484 384.025 429.684 392.361 413.01C400.348 396.684 420.493 389.736 436.818 397.726C462.186 410.412 492.001 411.725 517.741 402.589C464.484 402.589 428.731 376.995 410.769 339.369C400.049 316.995 417.204 291.78 440.29 291.78C417.254 291.78 400.026 266.61 410.769 244.191C428.31 207.446 465.818 180.582 513.226 180.624L629.23 191.392L712.237 149.709C723.997 143.829 737.022 149.266 742.105 159.435L797.674 270.592ZM511.14 247.32C493.774 247.32 478.491 257.046 470.851 272.677C465.294 284.489 453.834 291.435 441.678 291.782C453.834 292.13 465.294 299.077 470.851 310.887C478.491 326.519 493.774 336.245 511.14 336.245C516.983 336.262 522.773 335.124 528.175 332.896C533.577 330.667 538.484 327.393 542.616 323.26C546.748 319.128 550.022 314.22 552.249 308.818C554.477 303.415 555.614 297.626 555.596 291.782C555.596 264.996 533.336 247.32 511.14 247.32Z" />
+          </svg>
+          SignConnect
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-4">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link active" href="#">Learning</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="/#about-section">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="row mt-5">
+
+      <!-- for A -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/A.PNG') }}" alt="Card image cap" height="200" width="100">
+          <!-- <img class="card-img-top" src="../static/assets/A.PNG" alt="A" height="100" width="100"> -->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">A</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/B.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">B</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/C.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">C</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for D -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/D.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">D</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- second row -->
+    <div class="row mt-5">
+
+      <!-- for A -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/E.PNG') }}" alt="Card image cap" height="200" width="100">
+          <!-- <img class="card-img-top" src="../static/assets/E.PNG" alt="E" height="100" width="100"> -->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">E</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/F.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">F</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/G.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">G</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for D -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/H.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">H</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Third row-->
+    <div class="row mt-5">
+
+      <!-- for A -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/I.PNG') }}" alt="Card image cap" height="200" width="100">
+          <!--<img class="card-img-top" src="../static/assets/A.PNG" alt="A" height="100" width="100">-->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">I</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/J.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">J</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/K.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">K</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for D -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/L.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">L</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fourth row-->
+    <div class="row mt-5">
+
+      <!-- for A -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/M.PNG') }}" alt="Card image " height="200" width="100">
+          <!-- <img class="card-img-top" src="../static/assets/A.PNG" alt="A" height="100" width="100"> -->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">M</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/N.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">N</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/O.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">O</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for D -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/P.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">P</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fitfth Row-->
+    <div class="row mt-5">
+
+      <!-- for A -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/Q.PNG') }}" alt="Card image cap" height="200" width="100">
+          <!-- <img class="card-img-top" src="../static/assets/A.PNG" alt="A" height="100" width="100"> -->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">Q</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/R.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">R</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/S.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">S</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for D -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/T.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">T</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Six Row-->
+    <div class="row mt-5">
+
+      <!-- for A -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/U.PNG') }}" alt="Card image cap" height="200" width="100">
+          <!-- <img class="card-img-top" src="../static/assets/A.PNG" alt="A" height="100" width="100"> -->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">U</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/V.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">V</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/W.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">W</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for D -->
+      <div class="col">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/X.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">X</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--SEVENTH ROW  -->
+    <div class="row mt-5 justify-content-md-center">
+
+      <!-- for A -->
+      <div class="col-3">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/Y.PNG') }}" alt="Card image cap" height="200" width="100">
+          <!-- <img class="card-img-top" src="../static/assets/A.PNG" alt="A" height="100" width="100"> -->
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">Y</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- for B -->
+      <div class="col-3">
+        <div class="card card-border">
+          <img class="card-img-top" src= "{{ url_for('static', filename='assets/Z.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">Z</small>
+          </div>
+        </div>
+      </div>
+      
+      <!-- for c -->
+      <div class="col-3">
+        <div class="card card-border">
+          <img class="card-img-top" src="{{ url_for('static', filename='assets/Blank.PNG') }}" alt="Card image cap" height="200" width="100">
+          <div class="card-body">
+            <small class="font-weight-bold text-center h5">Blank</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

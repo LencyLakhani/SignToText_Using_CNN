@@ -42,7 +42,7 @@ nav{
 /* main section */
 .submit{
     background-color: var(--sec-color);
-    width: 60px;
+    width: 160px;
     color: white;
 }
 #landingLogo{

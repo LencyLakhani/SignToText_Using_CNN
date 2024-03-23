@@ -1,0 +1,11 @@
+
+.card-body{
+    background-color: var(--primery-color);
+    text-align: center;
+    color: var(--sec-color);
+}
+
+.card-border{
+    color: var(--sec-color);
+    border: solid 1px var(--sec-color);
+}

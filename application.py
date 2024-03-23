@@ -114,6 +114,10 @@ def index():
 def video():
     return render_template('video.html')
 
+@app.route('/learning')
+def learning():
+    return render_template('learning.html')
+
 # Route to handle stopping the video feed
 @app.route('/stop_video')
 def stop_video():

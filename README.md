@@ -67,11 +67,11 @@ This project aims to create a solution for converting sign language gestures int
 
 <div>
 <img src="screenshots/full.png">
-<img src="screenshots/web1.png">
-<img src="screenshots/web2.png">
-<img src="screenshots/web3.png">
-<img src="screenshots/web4.png">
-<img src="screenshots/web5.png">
+<img src="screenshots/web1.PNG">
+<img src="screenshots/web2.PNG">
+<img src="screenshots/web3.PNG">
+<img src="screenshots/web4.PNG">
+<img src="screenshots/web5.PNG">
 </div>
 
 ## Credits

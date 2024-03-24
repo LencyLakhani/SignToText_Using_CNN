@@ -63,6 +63,17 @@ This project aims to create a solution for converting sign language gestures int
 
 4. Access the application through a web browser at `http://localhost:5000`.
 
+## Screenshots
+
+<div>
+<img src="screenshots/full.png">
+<img src="screenshots/web1.png">
+<img src="screenshots/web2.png">
+<img src="screenshots/web3.png">
+<img src="screenshots/web4.png">
+<img src="screenshots/web5.png">
+</div>
+
 ## Credits
 
 - **Author:** Lency Lakhani

@@ -29,14 +29,16 @@ This project aims to create a solution for converting sign language gestures int
   - AJAX
   
 - Backend:
+  - Python
   - Flask
   - OpenCV
+  - NumPy
   
 - Machine Learning:
   - Keras
   - TensorFlow
-  - NumPy
-  
+  - CNN Model
+     
 - APIs:
   - Google Translate API(Rapid API)
   - Text-to-Speech API(Rapid API)
